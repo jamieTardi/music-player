@@ -1,0 +1,23 @@
+.song-container{
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.song-container > h2 {
+    padding-top: 1rem;
+    color: white;
+
+}
+
+.song-container > h3 {
+    padding-top: 1rem;
+    color: white;
+}
+img{
+    border-radius: 50%;
+    width: auto;
+    height: 30vh;
+    
+}

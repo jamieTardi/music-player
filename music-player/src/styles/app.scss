@@ -1,0 +1,30 @@
+@import './player';
+@import './song';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    background: url(../images/grey-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    min-height: 100vh;
+    font-family: 'Nerko One', cursive;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+
+.song-player-container{
+    position: absolute;
+width: 50vw;
+height: 90vh;
+background: #343a40;
+top: 5%;
+box-shadow: 0px 10px 13px -7px white, 5px 5px 15px 5px rgba(0,0,0,0);
+}

@@ -14,13 +14,28 @@
     color: white;
     input{
         width: 100%;
-        padding: 1rem 2rem;
+        
     }
     p{
         padding: 1rem;
     }
 
 }
+
+input[type="range"]{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    outline: none !important;
+    appearance:none;
+    border:none;
+    border-radius:30px;
+    background: #4CAF50;
+  }
+
+  input[type="range"]:hover {
+    outline:none;
+  }
 
 .play-control{
     width: 30%;

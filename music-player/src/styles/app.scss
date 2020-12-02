@@ -1,5 +1,6 @@
 @import './player';
 @import './song';
+@import './social';
 
 *{
     margin: 0;
@@ -13,10 +14,13 @@
     background-size: cover;
     background-repeat: none;
     min-height: 100vh;
+    min-width: 100vw;
     font-family: 'Nerko One', cursive;
     display: flex;
-    justify-content: center;
-    align-content: center;
+    flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   
     position: relative;
 }
 

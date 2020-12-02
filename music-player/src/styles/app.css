@@ -30,11 +30,26 @@
 
 .time-control input {
   width: 100%;
-  padding: 1rem 2rem;
 }
 
 .time-control p {
   padding: 1rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  outline: none !important;
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  border-radius: 30px;
+  background: #4CAF50;
+}
+
+input[type="range"]:hover {
+  outline: none;
 }
 
 .play-control {
@@ -99,6 +114,31 @@ img {
   height: 30vh;
 }
 
+.social-container {
+  min-height: 90vh;
+  min-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.social-container h1 {
+  position: absolute;
+  top: 0%;
+  left: 85%;
+  color: white;
+}
+
+.social-container svg {
+  fill: white;
+  cursor: pointer;
+  padding-left: 2rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -112,15 +152,21 @@ img {
   background-size: cover;
   background-repeat: none;
   min-height: 100vh;
+  min-width: 100vw;
   font-family: 'Nerko One', cursive;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 

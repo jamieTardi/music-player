@@ -1,6 +1,7 @@
 @import './player';
 @import './song';
 @import './social';
+@import './libary';
 
 *{
     margin: 0;
@@ -8,11 +9,15 @@
     box-sizing: border-box;
 }
 
-.App{
+html{
     background: url(../images/grey-background.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: none;
+}
+
+.App{
+    
     min-height: 100vh;
     min-width: 100vw;
     font-family: 'Nerko One', cursive;
@@ -20,7 +25,6 @@
     flex-direction: column;
    justify-content: space-between;
    align-items: center;
-   
     position: relative;
 }
 

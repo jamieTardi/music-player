@@ -115,28 +115,119 @@ img {
 }
 
 .social-container {
-  min-height: 90vh;
-  min-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10%;
+  left: 125%;
 }
 
 .social-container h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30vw;
   position: absolute;
-  top: 0%;
-  left: 85%;
+  font-size: x-large;
   color: white;
+}
+
+.social-container h1:nth-child(2) {
+  color: white;
+  margin-top: 12rem;
 }
 
 .social-container svg {
   fill: white;
   cursor: pointer;
-  padding-left: 2rem;
+  padding-left: 1rem;
+}
+
+.libary-container {
+  position: absolute;
+  right: 100%;
+  width: 23vw;
+  height: 90vh;
+  border: none;
+  background: #242424;
+  overflow: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: grey #1ED760;
+}
+
+.libary-song img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 0px;
+  margin-left: 1rem;
+}
+
+.libary-song {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  padding-bottom: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: none;
+}
+
+.libary-song:hover {
+  cursor: pointer;
+  background: #575757;
+  -webkit-box-shadow: 5px 5px 15px 5px white;
+          box-shadow: 5px 5px 15px 5px white;
+}
+
+.libary-song h3 {
+  max-width: 5vw;
+  font-size: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.libary-song h4 {
+  max-width: 5vw;
+  font-size: 0.5rem;
+  margin-right: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.name-container {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  margin-left: 1rem;
 }
 
 * {
@@ -146,11 +237,14 @@ img {
           box-sizing: border-box;
 }
 
-.App {
+html {
   background: url(../images/grey-background.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: none;
+}
+
+.App {
   min-height: 100vh;
   min-width: 100vw;
   font-family: 'Nerko One', cursive;

@@ -31,12 +31,12 @@ setSongInfo({...songInfo, currentTime: e.target.value})
         )
     }
     
-
-    //Play song function using the reference.
-    const playSongHandler = () => {
-        audioRef.current.play()
-        setHidePause(prev => !prev)
-    }
+//Play song function using the reference.
+const playSongHandler = () => {
+    audioRef.current.play()
+    setHidePause(prev => !prev)
+  }
+    
 
     //pause current song and change classname to previous
     const pauseSongHandler = () => {

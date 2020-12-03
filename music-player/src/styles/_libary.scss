@@ -1,0 +1,56 @@
+.libary-container{
+    position: absolute;
+    right: 100%;
+    width: 23vw;
+    height: 90vh;
+    border: none;
+    background: #242424;
+    overflow: scroll;
+    scrollbar-width: thin;        
+  scrollbar-color: grey #1ED760;   
+}
+
+
+.libary-song img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 0px;
+    margin-left: 1rem;
+    
+}
+
+.libary-song{
+    display: flex;
+    color: white;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-bottom: none;
+    &:hover{
+        cursor: pointer;
+        background: hsl(0, 0, 34);
+box-shadow: 5px 5px 15px 5px white;
+    }
+}
+
+.libary-song h3 {
+    max-width: 5vw;
+    font-size: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.libary-song h4 {
+    max-width: 5vw;
+    font-size: 0.5rem;
+   margin-right: 1.5rem;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.name-container{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-left: 1rem;
+}

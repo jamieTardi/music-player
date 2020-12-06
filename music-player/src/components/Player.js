@@ -1,11 +1,12 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faAngleDoubleLeft, faAngleDoubleRight, faPause } from '@fortawesome/free-solid-svg-icons'
 
-export default function Player({currentSong, setCurrentSong, songs, counter, setCounter, songInfo, setSongInfo}) {
+export default function Player({audioRef, songPlaying, setSongPlaying, currentSong, setCurrentSong, songs, counter, setCounter, songInfo, setSongInfo}) {
     //State setting and refrences
     const [hidePause, setHidePause] = useState(true)
-    const audioRef = useRef(null)
+    
+    
     
 //Drag the slider to change the song postion
 const dragHandler = (e) => {
@@ -13,17 +14,6 @@ const dragHandler = (e) => {
 setSongInfo({...songInfo, currentTime: e.target.value})
 }
   
-//Time update and state update
-    const timeUpdateHandler = (e) => {
-        const current = e.target.currentTime
-        let duration = e.target.duration
-        
-        setSongInfo({...songInfo,
-            currentTime: current,
-            duration
-                        })
-    }
-
     //Time formatting function
     const getTime = (time) => {
         return(
@@ -33,7 +23,10 @@ setSongInfo({...songInfo, currentTime: e.target.value})
     
 //Play song function using the reference.
 const playSongHandler = () => {
+    setSongPlaying(true)
+    console.log(songPlaying)
     audioRef.current.play()
+    
     setHidePause(prev => !prev)
   }
     
@@ -48,7 +41,6 @@ const playSongHandler = () => {
     const skipSong = () => {
         if (counter <= 8 || counter === 0){
         setCounter(counter + 1)
-        console.log(counter)
         setCurrentSong(songs[counter])
         }
         else{
@@ -59,15 +51,20 @@ const playSongHandler = () => {
 
     //Skip current song back by 1
     const skipBack =() => {
-        if (counter > -1 && counter <= 8){
+        if (counter > -1 && counter <= 18){
             setCounter(counter - 1)
-        console.log(counter)
         setCurrentSong(songs[counter])
         }
         else {
             setCounter(0)
         }
     }
+
+    useEffect(() => {
+        if (songPlaying && audioRef.current.paused) {
+            audioRef.current.play()
+        }
+    }, [songPlaying, currentSong])
 
     return (
         <div className="player-container">
@@ -85,7 +82,7 @@ const playSongHandler = () => {
                 <FontAwesomeIcon className="skip-forward" onClick={skipSong} size="2x" icon={faAngleDoubleRight}/>
 
             </div>
-            <audio ref={audioRef} onTimeUpdate={timeUpdateHandler} src={currentSong.audio} onLoadedMetadata={timeUpdateHandler}></audio>
+            
         </div>
     )
 }
